@@ -5,7 +5,7 @@ import os
 #################################################################################################
 #添加缺失函数
 
-head='void ort_taskwait(int num){}\n\void ort_taskenv_free(void *ptr, void *(*task_func)(void *)){}\nvoid ort_leaving_single(){}\nvoid * _ompi_crity;\nvoid ort_atomic_begin(){}\nvoid ort_atomic_end(){}\n'
+head='void ort_taskwait(int num){}\nvoid ort_taskenv_free(void *ptr, void *(*task_func)(void *)){}\nvoid ort_leaving_single(){}\nvoid * _ompi_crity;\nvoid ort_atomic_begin(){}\nvoid ort_atomic_end(){}\n'
 
 #################################################################################################
 #清除注释
