@@ -5,7 +5,7 @@ import os
 #################################################################################################
 #添加缺失函数
 
-#head='void ort_taskwait(int num){}\nvoid ort_taskenv_free(void *ptr, void *(*task_func)(void *)){}\nvoid ort_leaving_single(){}\nvoid * _ompi_crity;\nvoid ort_atomic_begin(){}\nvoid ort_atomic_end(){}\n'
+head='void ort_taskwait(int num){}\nvoid ort_taskenv_free(void *ptr, void *(*task_func)(void *)){}\nvoid ort_leaving_single(){}\nvoid * _ompi_crity;\nvoid ort_atomic_begin(){}\nvoid ort_atomic_end(){}\nint ort_barrier_me(){}\n'
 
 #################################################################################################
 #清除注释
@@ -124,8 +124,8 @@ def Trim(data_path):
     (filepath, tempfilename) = os.path.split(data_path)
     (filename, extension) = os.path.splitext(tempfilename)
     Output=open(filename+'_trim'+extension,'w')
-    #If necessary, you can remove the flag
-    #Output.write(head)
+    #If necessary, you can add the flag
+    Output.write(head)
     Output.write(data)
     print(data)
     #关闭输入输出流
