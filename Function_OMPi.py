@@ -124,7 +124,8 @@ def Trim(data_path):
     (filepath, tempfilename) = os.path.split(data_path)
     (filename, extension) = os.path.splitext(tempfilename)
     Output=open(filename+'_trim'+extension,'w')
-    Output.write(head)
+    #If necessary, you can remove the flag
+    #Output.write(head)
     Output.write(data)
     print(data)
     #关闭输入输出流
